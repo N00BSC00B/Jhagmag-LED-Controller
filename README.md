@@ -99,10 +99,9 @@ jhagmag-led-controller/
 
 ## Videos
 
-<video width="960" height="540" controls>
-  <source src="assets/video/1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<a href="https://streamable.com/wcu6o5">
+  <img src="assets/images/Thumbnail.png" alt="Video Thumbnail" width="500">
+</a>
 
 ## Arduino Schematic
 
@@ -117,7 +116,7 @@ The schematic should include:
 
 You can download the full schematic in Fritzing format [here](assets/schematics/jhagmag.fzz).
 
-![Arduino Schematic](assets/images/Schematic.png)
+<img src="assets/images/Schematic.png" alt="Video Thumbnail" width="500">
 
 ## Contributors
 
