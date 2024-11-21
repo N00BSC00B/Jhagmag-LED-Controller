@@ -127,13 +127,7 @@ The schematic details the connections between the HC-05 Bluetooth module, push b
 
 ---
 
-Here's the updated **Contributors** section with specific roles for hardware and software parts:
-
----
-
 ## Contributors
-
-Thanks to these wonderful contributors for their efforts in making this project a success:
 
 <table>
   <tr>
