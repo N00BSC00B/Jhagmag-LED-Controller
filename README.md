@@ -1,6 +1,6 @@
 # Jhagmag LED Controller
 
-**Jhagmag** is an Arduino-based LED controller that uses an HC-05 Bluetooth module and push-button support to control various LED patterns and effects. The project includes a Python GUI built with PyQt6, enabling users to control LED patterns, colors, and settings via serial connection or by using a push button to swap patterns. The hardware is assembled on a dot matrix board and housed in a custom box for portability and durability.
+**Jhagmag** is an Arduino-based LED controller designed for vibrant, customizable lighting effects. Utilizing an HC-05 Bluetooth module and optional push-button functionality, it offers control over a variety of LED patterns and effects. A Python GUI, developed with PyQt6, provides an intuitive interface for adjusting patterns, colors, and settings. For enhanced portability and durability, the hardware is assembled on a dot matrix board and enclosed in a custom housing.
 
 ## Table of Contents
 
@@ -8,55 +8,72 @@
 - [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
 - [Project Structure](#project-structure)
-- [Pictures](#Pictures)
+- [Pictures](#pictures)
 - [Videos](#videos)
 - [Arduino Schematic](#arduino-schematic)
 - [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
 - [License](#license)
+
+---
 
 ## Features
 
-- Control LED patterns and colors via Bluetooth using an HC-05 module or through a push button for offline pattern swapping.
-- Multiple LED patterns including:
+- **Control Mechanisms**:
+  - **Bluetooth Control**: Adjust patterns and settings via an HC-05 Bluetooth module.
+  - **Push Button**: Offline pattern swapping without Bluetooth connectivity.
+- **LED Patterns**:
   - Solid
   - Fade
   - Cycle
   - Rainbow Cycle
   - Breathing
   - Random
-- Real-time audio visualization with LED response.
-- Screen color detection and LED response.
-- GUI application built with PyQt6 and Tkinter for easy control.
-- Settings window to configure serial connection parameters.
-- Push-button support for pattern swapping without Bluetooth connection.
-- Enclosure built using a dot matrix board and custom box design.
+- **Advanced Features**:
+  - Real-time **audio visualization** with LEDs responding dynamically to sound.
+  - **Screen color detection**: Sync LEDs with the predominant screen color.
+- **Graphical Interface**:
+  - Built with **PyQt6** for cross-platform compatibility and intuitive controls.
+  - Integrated **settings window** for serial connection configuration.
+- **Compact Design**:
+  - Circuit assembled on a **dot matrix board** for reliability.
+  - Enclosed in a **custom housing** for a polished, portable setup.
+
+---
 
 ## Hardware Requirements
 
-- **Arduino board** (e.g., Arduino Uno)
-- **HC-05 Bluetooth module**
-- **RGB LED strip**
-- **Push button** for pattern swapping
-- **Resistors**:
-  - 3 x 200Ω resistors (for current limiting)
-  - 3 x 10kΩ resistors (for MOSFET gate pull-down)
-- **MOSFETs**:
-  - 3 x IRFZ44N (to control LED strip channels)
-- **Indicator LED**:
-  - Blue LED for power/on indication
-- **Dot Matrix Board**: For sturdy and permanent circuit assembly
-- **Custom Box Enclosure**: For housing the board and components
+- **Core Components**:
+  - Arduino board (e.g., Arduino Uno)
+  - HC-05 Bluetooth module
+  - RGB LED strip
+  - Push button (for pattern swapping)
+- **Electronics**:
+  - Resistors:
+    - 3 x 200Ω (current limiting for LED channels)
+    - 3 x 10kΩ (MOSFET gate pull-downs)
+  - 3 x IRFZ44N MOSFETs (to control RGB LED channels)
+  - Blue LED (power/on indicator)
+- **Assembly**:
+  - Dot matrix board for permanent wiring.
+  - Custom box enclosure for protection and portability.
+
+---
 
 ## Software Requirements
 
+Ensure the following dependencies are installed before running the software:
+
 - Python 3.6+
-- [PyQt6](https://pypi.org/project/PyQt6/)
-- [PyAudio](https://pypi.org/project/PyAudio/)
-- [Librosa](https://librosa.org/)
-- [Matplotlib](https://matplotlib.org/)
-- [scikit-learn](https://scikit-learn.org/)
-- [Pillow](https://pillow.readthedocs.io/)
-- [PySerial](https://pypi.org/project/pyserial/)
+- [PyQt6](https://pypi.org/project/PyQt6/) (GUI development)
+- [PyAudio](https://pypi.org/project/PyAudio/) (audio processing)
+- [Librosa](https://librosa.org/) (audio analysis)
+- [Matplotlib](https://matplotlib.org/) (visualization)
+- [scikit-learn](https://scikit-learn.org/) (machine learning utilities)
+- [Pillow](https://pillow.readthedocs.io/) (image processing)
+- [PySerial](https://pypi.org/project/pyserial/) (serial communication)
+
+---
 
 ## Project Structure
 
@@ -65,6 +82,7 @@ jhagmag-led-controller/
 ├── Jhagmag/
 │   ├── Jhagmag.ino                   # Arduino sketch for LED control
 ├── modules/
+│   ├── __init__.py
 │   ├── serial_connection.py          # Serial connection handling
 │   ├── audio_visualizer.py           # Audio visualization logic
 │   ├── screen_responsive.py          # Screen color detection logic
@@ -73,55 +91,55 @@ jhagmag-led-controller/
 └── README.md                         # Project documentation
 ```
 
-### Key Files
-
-- **[Jhagmag.ino](Jhagmag/Jhagmag.ino)**: Arduino sketch for controlling LED patterns, handling Bluetooth communication, and managing push-button input.
-- **[main.py](main.py)**: Main PyQt6 GUI application.
-- **[audio_visualizer.py](modules/audio_visualizer.py)**: Audio visualization logic.
-- **[screen_responsive.py](modules/screen_responsive.py)**: Screen color detection logic.
-- **[serial_connection.py](modules/serial_connection.py)**: Serial connection handling.
-- **[style.qss](style.qss)**: Stylesheet for the PyQt6 application.
+---
 
 ## Pictures
 
 <div style="display: flex; flex-wrap: wrap;">
-  <img src="assets/images/Solid.png" alt="Solid Screen" width="240" style="margin: 5px;">
+  <img src="assets/images/Solid.png" alt="Solid Pattern" width="240" style="margin: 5px;">
   <img src="assets/images/Color Picker.png" alt="Color Picker" width="240" style="margin: 5px;">
   <img src="assets/images/Patterns.png" alt="Patterns Screen" width="240" style="margin: 5px;">
-  <img src="assets/images/Audio Reactive.png" alt="Audio Reactive Screen" width="240" style="margin: 5px;">
-  <img src="assets/images/Screen Reactive.png" alt="Screen Reactive Screen" width="240" style="margin: 5px;">
+  <img src="assets/images/Audio Reactive.png" alt="Audio Reactive" width="240" style="margin: 5px;">
+  <img src="assets/images/Screen Reactive.png" alt="Screen Reactive" width="240" style="margin: 5px;">
   <img src="assets/images/Development.jpg" alt="Development Kit" width="240" style="margin: 5px;">
   <img src="assets/images/Connection.jpg" alt="Final Kit" width="240" style="margin: 5px;">
 </div>
 
+---
+
 ## Videos
 
-<a href="https://streamable.com/wcu6o5" target="_blank">
+<a href="https://youtu.be/UNQXKmhpDMk" target="_blank">
   <img src="assets/images/Thumbnail.png" alt="Video Thumbnail" width="500">
 </a>
 
-> **Note**: Click the thumbnail to watch the video. Open it in a new tab for better viewing by right-clicking and selecting "Open link in new tab."
+> **Note**: Right-click and select "Open link in new tab" for better viewing.
+
+---
 
 ## Arduino Schematic
 
-The schematic should include:
+The schematic details the connections between the HC-05 Bluetooth module, push button, RGB LED strip, and MOSFETs. Resistors ensure proper operation and safety, while the blue LED serves as an indicator.
 
-- **HC-05 Bluetooth module** connections to the Arduino for wireless control.
-- **Push button** wiring for pattern swapping when Bluetooth is not in use.
-- **RGB LED strip** wiring through three IRFZ44N MOSFETs for color control:
-  - Connect each RGB channel to a separate IRFZ44N MOSFET.
-  - Use 200Ω resistors for current limiting and 10kΩ resistors as pull-downs for the MOSFET gates.
-- **Blue LED** as an indicator light to signal power/on status.
+- **Fritzing File**: Download the complete schematic in Fritzing format [here](assets/schematics/jhagmag.fzz).
 
-You can download the full schematic in Fritzing format [here](assets/schematics/jhagmag.fzz).
+<img src="assets/images/Schematic.png" alt="Arduino Schematic" width="500">
 
-<img src="assets/images/Schematic.png" alt="Video Thumbnail" width="500">
+---
 
 ## Contributors
 
-- [Sayan Barma](https://github.com/N00BSC00B)
-- [Anirban Saha](https://github.com/TheFastest599)
+- [Sayan Barma](https://github.com/N00BSC00B) (Software and GUI Development)
+- [Anirban Saha](https://github.com/TheFastest599) (Hardware Design and Assembly)
+
+---
+
+## Acknowledgments
+
+Special thanks to open-source communities and contributors for tools and libraries like PyQt6, Librosa, and Fritzing.
+
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
