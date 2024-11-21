@@ -96,13 +96,14 @@ jhagmag-led-controller/
 ## Pictures
 
 <div style="display: flex; flex-wrap: wrap;">
-  <img src="assets/images/Solid.png" alt="Solid Pattern" width="240" style="margin: 5px;">
-  <img src="assets/images/Color Picker.png" alt="Color Picker" width="240" style="margin: 5px;">
-  <img src="assets/images/Patterns.png" alt="Patterns Screen" width="240" style="margin: 5px;">
-  <img src="assets/images/Audio Reactive.png" alt="Audio Reactive" width="240" style="margin: 5px;">
-  <img src="assets/images/Screen Reactive.png" alt="Screen Reactive" width="240" style="margin: 5px;">
-  <img src="assets/images/Development.jpg" alt="Development Kit" width="240" style="margin: 5px;">
-  <img src="assets/images/Connection.jpg" alt="Final Kit" width="240" style="margin: 5px;">
+  <img src="assets/images/Solid.png" alt="Solid Pattern" width="400" style="margin: 5px;">
+  <img src="assets/images/Color Picker.png" alt="Color Picker" width="400" style="margin: 5px;">
+  <img src="assets/images/Patterns.png" alt="Patterns Screen" width="400" style="margin: 5px;">
+  <img src="assets/images/Audio Reactive.png" alt="Audio Reactive" width="400" style="margin: 5px;">
+  <img src="assets/images/Screen Reactive.png" alt="Screen Reactive" width="400" style="margin: 5px;">
+  <img src="assets/images/Development.jpg" alt="Development Kit" width="400" style="margin: 5px;">
+  <img src="assets/images/Connection.jpg" alt="Final Kit" width="400" style="margin: 5px;">
+  <img src="assets/images/Preview.png" alt="Preview Shot" width="400" style="margin: 5px;">
 </div>
 
 ---
@@ -138,8 +139,8 @@ The schematic details the connections between the HC-05 Bluetooth module, push b
         <sub><b>Sayan Barma</b></sub>
       </a>
       <br />
-      <b>Software Development</b><br />
-      (Software and GUI Development)
+      <b>Software and GUI Development</b><br />
+      (GUI, Serial Communication, Audio & Screen Logic)
     </td>
     <td align="center">
       <a href="https://github.com/TheFastest599">
@@ -148,8 +149,8 @@ The schematic details the connections between the HC-05 Bluetooth module, push b
         <sub><b>Anirban Saha</b></sub>
       </a>
       <br />
-      <b>Hardware Design</b><br />
-      (Hardware Design and Assembly)
+      <b>Hardware Design and Assembly</b><br />
+      (Circuit Assembly, HC-05 & Push-Button Integration)
     </td>
   </tr>
 </table>
