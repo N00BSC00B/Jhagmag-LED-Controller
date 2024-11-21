@@ -1,62 +1,62 @@
 # Jhagmag LED Controller
 
-_Jhagmag_ is an Arduino-based LED controller designed for vibrant, customizable lighting effects. Utilizing an HC-05 Bluetooth module and optional push-button functionality, it offers control over a variety of LED patterns and effects. A Python GUI, developed with PyQt6, provides an intuitive interface for adjusting patterns, colors, and settings. For enhanced portability and durability, the hardware is assembled on a dot matrix board and enclosed in a custom housing.
+**Jhagmag** is an Arduino-based LED controller designed for vibrant, customizable lighting effects. Utilizing an HC-05 Bluetooth module and optional push-button functionality, it offers control over a variety of LED patterns and effects. A Python GUI, developed with PyQt6, provides an intuitive interface for adjusting patterns, colors, and settings. For enhanced portability and durability, the hardware is assembled on a dot matrix board and enclosed in a custom housing.
 
 ## Table of Contents
 
--   [Features](#features)
--   [Hardware Requirements](#hardware-requirements)
--   [Software Requirements](#software-requirements)
--   [Project Structure](#project-structure)
--   [Pictures](#pictures)
--   [Videos](#videos)
--   [Arduino Schematic](#arduino-schematic)
--   [Contributors](#contributors)
--   [Acknowledgments](#acknowledgments)
--   [License](#license)
+- [Features](#features)
+- [Hardware Requirements](#hardware-requirements)
+- [Software Requirements](#software-requirements)
+- [Project Structure](#project-structure)
+- [Pictures](#pictures)
+- [Videos](#videos)
+- [Arduino Schematic](#arduino-schematic)
+- [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
 ---
 
 ## Features
 
--   _Control Mechanisms_:
-    -   _Bluetooth Control_: Adjust patterns and settings via an HC-05 Bluetooth module.
-    -   _Push Button_: Offline pattern swapping without Bluetooth connectivity.
--   _LED Patterns_:
-    -   Solid
-    -   Fade
-    -   Cycle
-    -   Rainbow Cycle
-    -   Breathing
-    -   Random
--   _Advanced Features_:
-    -   Real-time _audio visualization_ with LEDs responding dynamically to sound.
-    -   _Screen color detection_: Sync LEDs with the predominant screen color.
--   _Graphical Interface_:
-    -   Built with _PyQt6_ for cross-platform compatibility and intuitive controls.
-    -   Integrated _settings window_ for serial connection configuration.
--   _Compact Design_:
-    -   Circuit assembled on a _dot matrix board_ for reliability.
-    -   Enclosed in a _custom housing_ for a polished, portable setup.
+- **Control Mechanisms**:
+  - **Bluetooth Control**: Adjust patterns and settings via an HC-05 Bluetooth module.
+  - **Push Button**: Offline pattern swapping without Bluetooth connectivity.
+- **LED Patterns**:
+  - Solid
+  - Fade
+  - Cycle
+  - Rainbow Cycle
+  - Breathing
+  - Random
+- **Advanced Features**:
+  - Real-time **audio visualization** with LEDs responding dynamically to sound.
+  - **Screen color detection**: Sync LEDs with the predominant screen color.
+- **Graphical Interface**:
+  - Built with **PyQt6** for cross-platform compatibility and intuitive controls.
+  - Integrated **settings window** for serial connection configuration.
+- **Compact Design**:
+  - Circuit assembled on a **dot matrix board** for reliability.
+  - Enclosed in a **custom housing** for a polished, portable setup.
 
 ---
 
 ## Hardware Requirements
 
--   _Core Components_:
-    -   Arduino board (e.g., Arduino Uno)
-    -   HC-05 Bluetooth module
-    -   RGB LED strip
-    -   Push button (for pattern swapping)
--   _Electronics_:
-    -   Resistors:
-        -   3 x 200Ω (current limiting for LED channels)
-        -   3 x 10kΩ (MOSFET gate pull-downs)
-    -   3 x IRFZ44N MOSFETs (to control RGB LED channels)
-    -   Blue LED (power/on indicator)
--   _Assembly_:
-    -   Dot matrix board for permanent wiring.
-    -   Custom box enclosure for protection and portability.
+- **Core Components**:
+  - Arduino board (e.g., Arduino Uno)
+  - HC-05 Bluetooth module
+  - RGB LED strip
+  - Push button (for pattern swapping)
+- **Electronics**:
+  - Resistors:
+    - 3 x 200Ω (current limiting for LED channels)
+    - 3 x 10kΩ (MOSFET gate pull-downs)
+  - 3 x IRFZ44N MOSFETs (to control RGB LED channels)
+  - Blue LED (power/on indicator)
+- **Assembly**:
+  - Dot matrix board for permanent wiring.
+  - Custom box enclosure for protection and portability.
 
 ---
 
@@ -64,30 +64,32 @@ _Jhagmag_ is an Arduino-based LED controller designed for vibrant, customizable 
 
 Ensure the following dependencies are installed before running the software:
 
--   Python 3.6+
--   [PyQt6](https://pypi.org/project/PyQt6/) (GUI development)
--   [PyAudio](https://pypi.org/project/PyAudio/) (audio processing)
--   [Librosa](https://librosa.org/) (audio analysis)
--   [Matplotlib](https://matplotlib.org/) (visualization)
--   [scikit-learn](https://scikit-learn.org/) (machine learning utilities)
--   [Pillow](https://pillow.readthedocs.io/) (image processing)
--   [PySerial](https://pypi.org/project/pyserial/) (serial communication)
+- Python 3.6+
+- [PyQt6](https://pypi.org/project/PyQt6/) (GUI development)
+- [PyAudio](https://pypi.org/project/PyAudio/) (audio processing)
+- [Librosa](https://librosa.org/) (audio analysis)
+- [Matplotlib](https://matplotlib.org/) (visualization)
+- [scikit-learn](https://scikit-learn.org/) (machine learning utilities)
+- [Pillow](https://pillow.readthedocs.io/) (image processing)
+- [PySerial](https://pypi.org/project/pyserial/) (serial communication)
 
 ---
 
 ## Project Structure
 
+```
 jhagmag-led-controller/
 ├── Jhagmag/
-│ ├── Jhagmag.ino # Arduino sketch for LED control
+│   ├── Jhagmag.ino                   # Arduino sketch for LED control
 ├── modules/
-│ ├── **init**.py
-│ ├── serial_connection.py # Serial connection handling
-│ ├── audio_visualizer.py # Audio visualization logic
-│ ├── screen_responsive.py # Screen color detection logic
-├── main.py # Main PyQt6 GUI application
-├── style.qss # Stylesheet for the PyQt6 application
-└── README.md # Project documentation
+│   ├── __init__.py
+│   ├── serial_connection.py          # Serial connection handling
+│   ├── audio_visualizer.py           # Audio visualization logic
+│   ├── screen_responsive.py          # Screen color detection logic
+├── main.py                           # Main PyQt6 GUI application
+├── style.qss                         # Stylesheet for the PyQt6 application
+└── README.md                         # Project documentation
+```
 
 ---
 
@@ -111,7 +113,7 @@ jhagmag-led-controller/
   <img src="assets/images/Thumbnail.png" alt="Video Thumbnail" width="500">
 </a>
 
-> _Note_: Right-click and select "Open link in new tab" for better viewing.
+> **Note**: Right-click and select "Open link in new tab" for better viewing.
 
 ---
 
@@ -119,13 +121,13 @@ jhagmag-led-controller/
 
 The schematic details the connections between the HC-05 Bluetooth module, push button, RGB LED strip, and MOSFETs. Resistors ensure proper operation and safety, while the blue LED serves as an indicator.
 
--   _Fritzing File_: Download the complete schematic in Fritzing format [here](assets/schematics/jhagmag.fzz).
+- **Fritzing File**: Download the complete schematic in Fritzing format [here](assets/schematics/jhagmag.fzz).
 
 <img src="assets/images/Schematic.png" alt="Arduino Schematic" width="500">
 
 ---
 
-Here's the updated _Contributors_ section with specific roles for hardware and software parts:
+Here's the updated **Contributors** section with specific roles for hardware and software parts:
 
 ---
 
