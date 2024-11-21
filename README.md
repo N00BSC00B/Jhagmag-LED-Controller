@@ -84,24 +84,23 @@ jhagmag-led-controller/
 
 ## Pictures
 
-<details>
-  <summary>Click to expand screenshots</summary>
-  <div style="display: flex; flex-wrap: wrap;">
-    <img src="assets/images/Solid.png" alt="Solid Screen" width="240" style="margin: 5px;">
-    <img src="assets/images/Color Picker.png" alt="Color Picker" width="240" style="margin: 5px;">
-    <img src="assets/images/Patterns.png" alt="Patterns Screen" width="240" style="margin: 5px;">
-    <img src="assets/images/Audio Reactive.png" alt="Audio Reactive Screen" width="240" style="margin: 5px;">
-    <img src="assets/images/Screen Reactive.png" alt="Screen Reactive Screen" width="240" style="margin: 5px;">
-    <img src="assets/images/Development.jpg" alt="Development Kit" width="240" style="margin: 5px;">
-    <img src="assets/images/Connection.jpg" alt="Final Kit" width="240" style="margin: 5px;">
-  </div>
-</details>
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="assets/images/Solid.png" alt="Solid Screen" width="240" style="margin: 5px;">
+  <img src="assets/images/Color Picker.png" alt="Color Picker" width="240" style="margin: 5px;">
+  <img src="assets/images/Patterns.png" alt="Patterns Screen" width="240" style="margin: 5px;">
+  <img src="assets/images/Audio Reactive.png" alt="Audio Reactive Screen" width="240" style="margin: 5px;">
+  <img src="assets/images/Screen Reactive.png" alt="Screen Reactive Screen" width="240" style="margin: 5px;">
+  <img src="assets/images/Development.jpg" alt="Development Kit" width="240" style="margin: 5px;">
+  <img src="assets/images/Connection.jpg" alt="Final Kit" width="240" style="margin: 5px;">
+</div>
 
 ## Videos
 
-<a href="https://streamable.com/wcu6o5">
+<a href="https://streamable.com/wcu6o5" target="_blank">
   <img src="assets/images/Thumbnail.png" alt="Video Thumbnail" width="500">
 </a>
+
+> **Note**: Click the thumbnail to watch the video. Open it in a new tab for better viewing by right-clicking and selecting "Open link in new tab."
 
 ## Arduino Schematic
 
