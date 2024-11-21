@@ -115,7 +115,7 @@ class LEDControllerUI(QMainWindow):
         super().__init__()
         self.setWindowTitle("Jhagmag")
         self.setFixedSize(500, 400)
-        self.setWindowIcon(QIcon("icon.ico"))
+        self.setWindowIcon(QIcon("assets/icon.ico"))
 
         # Variables
         self.R = 0
@@ -767,7 +767,7 @@ class SettingsWindow(QMainWindow):
         super().__init__()
         self.conn = conn
         self.setWindowTitle("Settings")
-        self.setWindowIcon(QIcon("icon.ico"))
+        self.setWindowIcon(QIcon("assets/icon.ico"))
 
         # Main layout
         layout = QVBoxLayout()

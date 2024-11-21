@@ -8,7 +8,7 @@
 - [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
 - [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
+- [Pictures](#Pictures)
 - [Videos](#videos)
 - [Arduino Schematic](#arduino-schematic)
 - [Contributors](#contributors)
@@ -63,31 +63,46 @@
 ```
 jhagmag-led-controller/
 ├── Jhagmag/
-│   ├── Jhagmag.ino               # Arduino sketch for LED control
-├── audio_visualizer.py           # Audio visualization logic
-├── main.py                      # Main PyQt6 GUI application
-├── screen_responsive.py          # Screen color detection logic
-├── serial_connection.py          # Serial connection handling
-├── style.qss                     # Stylesheet for the PyQt6 application
-└── README.md                     # Project documentation
+│   ├── Jhagmag.ino                   # Arduino sketch for LED control
+├── modules/
+│   ├── serial_connection.py          # Serial connection handling
+│   ├── audio_visualizer.py           # Audio visualization logic
+│   ├── screen_responsive.py          # Screen color detection logic
+├── main.py                           # Main PyQt6 GUI application
+├── style.qss                         # Stylesheet for the PyQt6 application
+└── README.md                         # Project documentation
 ```
 
 ### Key Files
 
 - **[Jhagmag.ino](Jhagmag/Jhagmag.ino)**: Arduino sketch for controlling LED patterns, handling Bluetooth communication, and managing push-button input.
 - **[main.py](main.py)**: Main PyQt6 GUI application.
-- **[audio_visualizer.py](audio_visualizer.py)**: Audio visualization logic.
-- **[screen_responsive.py](screen_responsive.py)**: Screen color detection logic.
-- **[serial_connection.py](serial_connection.py)**: Serial connection handling.
+- **[audio_visualizer.py](modules/audio_visualizer.py)**: Audio visualization logic.
+- **[screen_responsive.py](modules/screen_responsive.py)**: Screen color detection logic.
+- **[serial_connection.py](modules/serial_connection.py)**: Serial connection handling.
 - **[style.qss](style.qss)**: Stylesheet for the PyQt6 application.
 
-## Screenshots
+## Pictures
 
-Include screenshots of the GUI application to showcase various features.
+<details>
+  <summary>Click to expand screenshots</summary>
+  <div style="display: flex; flex-wrap: wrap;">
+    <img src="assets/images/Solid.png" alt="Solid Screen" width="240" style="margin: 5px;">
+    <img src="assets/images/Color Picker.png" alt="Color Picker" width="240" style="margin: 5px;">
+    <img src="assets/images/Patterns.png" alt="Patterns Screen" width="240" style="margin: 5px;">
+    <img src="assets/images/Audio Reactive.png" alt="Audio Reactive Screen" width="240" style="margin: 5px;">
+    <img src="assets/images/Screen Reactive.png" alt="Screen Reactive Screen" width="240" style="margin: 5px;">
+    <img src="assets/images/Development.jpg" alt="Development Kit" width="240" style="margin: 5px;">
+    <img src="assets/images/Connection.jpg" alt="Final Kit" width="240" style="margin: 5px;">
+  </div>
+</details>
 
 ## Videos
 
-Include links to demonstration videos to show LED patterns and effects in action.
+<video width="960" height="540" controls>
+  <source src="assets/video/1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Arduino Schematic
 
@@ -100,10 +115,14 @@ The schematic should include:
   - Use 200Ω resistors for current limiting and 10kΩ resistors as pull-downs for the MOSFET gates.
 - **Blue LED** as an indicator light to signal power/on status.
 
+You can download the full schematic in Fritzing format [here](assets/schematics/jhagmag.fzz).
+
+![Arduino Schematic](assets/images/Schematic.png)
+
 ## Contributors
 
--
--
+- [Sayan Barma](https://github.com/N00BSC00B)
+- [Anirban Saha](https://github.com/TheFastest599)
 
 ## License
 
